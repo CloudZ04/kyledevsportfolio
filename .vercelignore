@@ -1,0 +1,9 @@
+# Don't upload local env (use Vercel env vars instead)
+.env
+.env.example
+# Optional: ignore local logs (serverless can't persist them anyway)
+submissions.txt
+email_errors.log
+
+# Root contact.php: exclude so Vercel uses the rewrite to api/contact.php (POST would 405 if this were served as static)
+/contact.php
