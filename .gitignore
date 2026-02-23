@@ -1,0 +1,14 @@
+# Environment variables (contains passwords)
+.env
+
+# Composer dependencies
+/vendor/
+
+# Log files
+*.log
+email_errors.log
+submissions.txt
+
+# System files
+.DS_Store
+Thumbs.db
