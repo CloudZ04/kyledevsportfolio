@@ -1,0 +1,11 @@
+{
+  "functions": {
+    "api/*.php": {
+      "runtime": "vercel-php@0.9.0"
+    }
+  },
+  "rewrites": [
+    { "source": "/contact.php", "destination": "/api/contact.php" }
+  ],
+  "installCommand": "composer install --no-dev"
+}
