@@ -922,7 +922,6 @@ footer {
     .faq-item.active .faq-answer {
         max-height: 1800px;
     }
-    
 }
 
 /* Media Queries */
@@ -933,6 +932,7 @@ footer {
 
 .about-text {
     flex: 0 0 40%;
+    font-size: 0.9rem;
 }
 
 .about-image {
