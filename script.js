@@ -210,7 +210,52 @@ document.addEventListener('DOMContentLoaded', function() {
       
       // Initialize view more buttons for projects
       initViewMore();
-      
+
+      // Mobile: open project image in fullscreen modal on click/tap
+      const modal = document.getElementById('project-image-modal');
+      if (modal) {
+        const modalImg = modal.querySelector('.project-image-modal-img');
+        const modalClose = modal.querySelector('.project-image-modal-close');
+        function openProjectImageModal(src, alt) {
+          if (!modalImg) return;
+          modalImg.src = src;
+          modalImg.alt = alt || 'Project image';
+          modal.classList.add('open');
+          modal.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
+        }
+        function closeProjectImageModal() {
+          modal.classList.remove('open');
+          modal.setAttribute('aria-hidden', 'true');
+          document.body.style.overflow = '';
+        }
+        modalClose.addEventListener('click', closeProjectImageModal);
+        modal.addEventListener('click', function(e) {
+          if (e.target === modal) closeProjectImageModal();
+        });
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && modal.classList.contains('open')) closeProjectImageModal();
+        });
+        // Delegate from projects section so we catch click/tap on preview or any child
+        projectsSection.addEventListener('click', function(e) {
+          const preview = e.target.closest('.project-image-preview');
+          if (!preview) return;
+          if (!window.matchMedia('(max-width: 768px)').matches) return;
+          e.preventDefault();
+          e.stopPropagation();
+          const img = preview.querySelector('img');
+          if (img && img.src) openProjectImageModal(img.src, img.alt);
+        });
+        projectsSection.addEventListener('touchend', function(e) {
+          const preview = e.target.closest('.project-image-preview');
+          if (!preview) return;
+          if (!window.matchMedia('(max-width: 768px)').matches) return;
+          e.preventDefault();
+          const img = preview.querySelector('img');
+          if (img && img.src) openProjectImageModal(img.src, img.alt);
+        }, { passive: false });
+      }
+
       // Apply current navigation state
       const hash = window.location.hash.replace("#", "");
       const currentSection = hash || "about";

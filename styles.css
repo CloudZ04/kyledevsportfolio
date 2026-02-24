@@ -368,6 +368,51 @@ main {
     transform: scale(1.05);
 }
 
+/* Fullscreen image modal (mobile) */
+.project-image-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.92);
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+.project-image-modal.open {
+    display: flex;
+}
+.project-image-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 48px;
+    height: 48px;
+    border: none;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: background 0.2s ease;
+}
+.project-image-modal-close:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+.project-image-modal-img {
+    max-width: 100%;
+    max-height: calc(100vh - 4rem);
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
 .project-details {
     padding: 1.5rem;
 }
@@ -634,6 +679,7 @@ main {
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .form-group {
@@ -650,6 +696,7 @@ main {
 .form-group input,
 .form-group textarea {
     width: 100%;
+    box-sizing: border-box;
     padding: 0.8rem;
     background-color: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -674,6 +721,7 @@ main {
 
 .submit-btn {
     width: 100%;
+    box-sizing: border-box;
     padding: 1rem 2rem;
     background-color: rgba(254, 255, 176, 0.1);
     border: 2px solid #feffb0;
@@ -755,7 +803,124 @@ footer {
         padding: 1rem 5%;
         transition: all 0.3s ease;
     }
+
+    header.scrolled {
+        background-color: rgba(25, 20, 32, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        padding: 0.5rem 5%;
+    }
+
     nav {
         font-size: 1.2rem;
     }
+    
+    nav ul {
+        gap: 1.5rem;
+    }
+
+    /* About Section Layout */
+.about-content {
+    gap: 1rem;
+}
+
+.about-text {
+    flex: 0 0 50%;
+}
+
+.about-image {
+    flex: 0 0 50%;
+}
+
+.about-image img {
+    width: 90%;
+}
+
+/* Details Section */
+#details {
+    margin-top: 4rem;
+}
+
+.details-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: .5rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.tab-btn.active {
+    border-color: #feffb0;
+    background-color: rgba(254, 255, 176, 0.1);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+
+    /* Mobile: no timeline line; single card with date then logo then content */
+    #details .timeline-logo, .timeline::before {
+        display: none;
+    }
+
+    #details .timeline {
+        padding-left: 0;
+    }
+
+
+.project-image-preview {
+    width: 100%;
+    height: 160px;
+    zoom: 1.33;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+}
+
+    #projects .project-item:hover .project-image-preview img,
+    #projects .project-item:hover .project-image-preview--centered img {
+        transform: none;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 0.8rem;
+        background-color: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        color: #fff;
+        font-family: 'Nunito', sans-serif;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+    }
+
+    .faq-item.active .faq-answer {
+        max-height: 1800px;
+    }
+    
 }

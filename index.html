@@ -181,6 +181,12 @@
         </div>
     </footer>
 
+    <!-- Fullscreen image modal (mobile) -->
+    <div id="project-image-modal" class="project-image-modal" aria-hidden="true">
+        <button type="button" class="project-image-modal-close" aria-label="Close">&times;</button>
+        <img src="" alt="" class="project-image-modal-img">
+    </div>
+
     <!-- Get current year for copyright statement -->
     <script>
         document.querySelector('footer p:first-child').textContent = `© 2024-${new Date().getFullYear()} Kyle Devs | All Rights Reserved`;
