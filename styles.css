@@ -926,19 +926,16 @@ footer {
 }
 
 .about-text {
-    flex: 0 0 40%;
+    flex: 0 0 50%;
     font-size: 0.9rem;
 }
 
 .about-image {
-    flex: 0 0 60%;
+    flex: 0 0 50%;
 }
 
 .about-image img {
     width: 50%;
 }
-.about-text .about-photo {
-    width: 45%;      /* less or more “photo column” */
-    max-width: 220px;
-}
+
 }
