@@ -926,6 +926,10 @@ footer {
 
 /* Media Queries */
 @media (max-width: 480px) {
+
+    .about{
+        box-sizing: border-box;
+    }
 .about-content {
     gap: 1rem;
 }
@@ -940,7 +944,7 @@ footer {
 }
 
 .about-image img {
-    width: 80%;
+    width: 70%;
 }
 
 }
