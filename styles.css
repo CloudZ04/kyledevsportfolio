@@ -822,6 +822,7 @@ footer {
     /* About Section Layout */
 .about-content {
     gap: 1rem;
+    max-width: 65%;
 }
 
 .about-text {
@@ -834,6 +835,7 @@ footer {
 
 .about-image img {
     width: 90%;
+    max-width: 100%;
 }
 
 /* Details Section */
