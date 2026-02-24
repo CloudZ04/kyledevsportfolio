@@ -921,21 +921,13 @@ footer {
 
 /* Media Queries */
 @media (max-width: 480px) {
-.about-content {
-    gap: 1rem;
-}
+    /* About: tighten photo on very small screens so it keeps wrapping with text */
+    .about-text {
+        font-size: 0.9rem;
+    }
 
-.about-text {
-    flex: 0 0 50%;
-    font-size: 0.9rem;
-}
-
-.about-image {
-    flex: 0 0 50%;
-}
-
-.about-image img {
-    width: 50%;
-}
-
+    .about-text .about-photo {
+        width: 35%;
+        max-width: 140px;
+    }
 }
