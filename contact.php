@@ -104,7 +104,7 @@ try {
     $mail->Subject = "Portfolio Contact: " . $subject;
 
     // Logo: embed PNG if present, else text fallback
-    $logoHtml = "<span style=\"font-weight:700;color:#feffb0;font-size:18px;\">Kyle Devs</span>";
+    $logoHtml = "<span style=\"font-weight:700;color:#fbff2b;font-size:18px;\">Kyle Devs</span>";
     $emailLogoPath = __DIR__ . '/assets/email-logo.png';
     if (file_exists($emailLogoPath)) {
         $mail->addEmbeddedImage($emailLogoPath, 'email_logo', 'email-logo.png');
@@ -128,18 +128,18 @@ try {
         .card { max-width: 640px; margin: 0 auto; background:#191420 !important; border-radius:12px; overflow:hidden; border:1px solid rgba(255,255,255,0.08); }
         .card-header { display:flex; align-items:center; justify-content:space-between; padding:16px 20px; background:#191420 !important; }
         .logo-email { height:32px; width:auto; display:block; }
-        .site-name { font-size:18px; font-weight:700; color:#feffb0; margin:0; }
+        .site-name { font-size:18px; font-weight:700; color:#fbff2b; margin:0; }
         .card-body { padding:20px; background:#191420 !important; }
         .sender-row { display:flex; align-items:flex-start; justify-content:space-between; gap:24px; margin-bottom:16px; }
         .sender-left { flex:1; }
         .sender-right { font-size:12px; color:rgba(255,255,255,0.6); text-align:right; white-space:nowrap; }
         .section-title { font-size:13px; text-transform:uppercase; letter-spacing:0.08em; color:rgba(255,255,255,0.6); margin:0 0 8px; }
         .field-row { margin-bottom:10px; font-size:14px; }
-        .field-label { font-weight:600; color:#feffb0; }
+        .field-label { font-weight:600; color:#fbff2b; }
         .field-value { color:rgba(255,255,255,0.88); }
-        .message-box { margin-top:6px; padding:14px 16px; background:#16111f !important; border-radius:8px; border-left:4px solid #feffb0; }
+        .message-box { margin-top:6px; padding:14px 16px; background:#16111f !important; border-radius:8px; border-left:4px solid #fbff2b; }
         .card-footer { padding:10px 20px 14px; font-size:11px; color:rgba(255,255,255,0.5); border-top:1px solid rgba(255,255,255,0.06); text-align:center; background:#191420 !important; }
-        a { color:#feffb0; }
+        a { color:#fbff2b; }
       </style>
     </head>
     <body style=\"background:#262036;\">

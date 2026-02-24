@@ -13,7 +13,7 @@ body {
 }
 
 a {
-    color: #feffb0;
+    color: #fbff2b;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -75,7 +75,7 @@ nav ul {
 }
 nav ul li a {
     text-decoration: none;
-    color: #feffb0;
+    color: #fbff2b;
     transition: color 0.3s ease;
 }
 
@@ -130,9 +130,9 @@ main {
 }
 
 .social-links a:hover {
-    background-color: rgba(254, 255, 176, 0.1);
-    border-color: #feffb0;
-    color: #feffb0;
+    background-color: rgba(251, 255, 43, 0.1);
+    border-color: #fbff2b;
+    color: #fbff2b;
     transform: translateY(-3px);
 }
 
@@ -168,8 +168,8 @@ main {
 }
 
 .tab-btn.active {
-    border-color: #feffb0;
-    background-color: rgba(254, 255, 176, 0.1);
+    border-color: #fbff2b;
+    background-color: rgba(251, 255, 43, 0.1);
 }
 
 .tab-content {
@@ -297,8 +297,8 @@ main {
 }
 
 .project-tab-btn.active {
-    border-color: #feffb0;
-    background-color: rgba(254, 255, 176, 0.1);
+    border-color: #fbff2b;
+    background-color: rgba(251, 255, 43, 0.1);
 }
 
 .project-tab-content {
@@ -325,7 +325,7 @@ main {
 }
 
 .project-item:hover {
-    border-color: rgba(254, 255, 176, 0.3);
+    border-color: rgba(251, 255, 43, 0.3);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
@@ -477,10 +477,10 @@ main {
 
 .view-more-btn {
     padding: 0.6rem 1.5rem;
-    background-color: rgba(254, 255, 176, 0.1);
-    border: 2px solid #feffb0;
+    background-color: rgba(251, 255, 43, 0.1);
+    border: 2px solid #fbff2b;
     border-radius: 8px;
-    color: #feffb0;
+    color: #fbff2b;
     font-family: 'Nunito', sans-serif;
     font-size: 0.95rem;
     font-weight: 600;
@@ -491,10 +491,10 @@ main {
 }
 
 .view-more-btn:hover {
-    background-color: #feffb0;
+    background-color: #fbff2b;
     color: #191420;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(254, 255, 176, 0.3);
+    box-shadow: 0 4px 12px rgba(251, 255, 43, 0.3);
 }
 
 .view-more-btn.show {
@@ -511,7 +511,7 @@ main {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 2rem;
-    color: #feffb0;
+    color: #fbff2b;
 }
 
 .faq-container {
@@ -529,7 +529,7 @@ main {
 }
 
 .faq-item:hover {
-    border-color: rgba(254, 255, 176, 0.3);
+    border-color: rgba(251, 255, 43, 0.3);
 }
 
 .faq-question {
@@ -550,13 +550,13 @@ main {
 }
 
 .faq-question:hover {
-    color: #feffb0;
+    color: #fbff2b;
 }
 
 .faq-question i {
     font-size: 0.9rem;
     transition: transform 0.3s ease;
-    color: #feffb0;
+    color: #fbff2b;
 }
 
 .faq-item.active .faq-question i {
@@ -600,7 +600,7 @@ main {
 
 .faq-list > li::before {
     content: "•";
-    color: #feffb0;
+    color: #fbff2b;
     font-weight: bold;
     font-size: 1rem;
     position: absolute;
@@ -630,7 +630,7 @@ main {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 2rem;
-    color: #feffb0;
+    color: #fbff2b;
 }
 
 .contact-times {
@@ -643,7 +643,7 @@ main {
     color: rgba(255, 255, 255, 0.75);
 }
 .contact-times .time-block strong {
-    color: #feffb0;
+    color: #fbff2b;
     font-weight: 600;
 }
 .contact-times .time-sep {
@@ -664,7 +664,7 @@ main {
 .form-message.success {
     background-color: rgba(251, 255, 0, 0.147);
     border: 1px solid rgba(251, 255, 0, 0.347);
-    color: #feffb0;
+    color: #fbff2b;
 }
 
 
@@ -709,7 +709,7 @@ main {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #feffb0;
+    border-color: #fbff2b;
     background-color: rgba(255, 255, 255, 0.08);
 }
 
@@ -722,10 +722,10 @@ main {
     width: 100%;
     box-sizing: border-box;
     padding: 1rem 2rem;
-    background-color: rgba(254, 255, 176, 0.1);
-    border: 2px solid #feffb0;
+    background-color: rgba(251, 255, 43, 0.1);
+    border: 2px solid #fbff2b;
     border-radius: 8px;
-    color: #feffb0;
+    color: #fbff2b;
     font-family: 'Nunito', sans-serif;
     font-size: 1.1rem;
     font-weight: 600;
@@ -734,10 +734,10 @@ main {
 }
 
 .submit-btn:hover {
-    background-color: #feffb0;
+    background-color: #fbff2b;
     color: #191420;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(254, 255, 176, 0.3);
+    box-shadow: 0 4px 12px rgba(251, 255, 43, 0.3);
 }
 
 /* Footer */
@@ -781,9 +781,9 @@ footer {
 }
 
 .footer-links a:hover {
-    background-color: rgba(254, 255, 176, 0.1);
-    border-color: #feffb0;
-    color: #feffb0;
+    background-color: rgba(251, 255, 43, 0.1);
+    border-color: #fbff2b;
+    color: #fbff2b;
     transform: translateY(-3px);
 }
 
@@ -869,8 +869,8 @@ footer {
 }
 
 .tab-btn.active {
-    border-color: #feffb0;
-    background-color: rgba(254, 255, 176, 0.1);
+    border-color: #fbff2b;
+    background-color: rgba(251, 255, 43, 0.1);
 }
 
 .tab-content {
