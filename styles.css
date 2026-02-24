@@ -739,3 +739,17 @@ footer {
     color: #feffb0;
     transform: translateY(-3px);
 }
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    body {
+        padding-inline: 5%;
+    }
+    header {
+        padding: 1rem 5%;
+    }
+    nav {
+        font-size: 1.2rem;
+    }
+}
