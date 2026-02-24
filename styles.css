@@ -924,3 +924,23 @@ footer {
     }
     
 }
+
+/* Media Queries */
+@media (max-width: 480px) {
+.about-content {
+    gap: 1rem;
+}
+
+.about-text {
+    flex: 0 0 40%;
+}
+
+.about-image {
+    flex: 0 0 60%;
+}
+
+.about-image img {
+    width: 90%;
+}
+
+}
