@@ -827,16 +827,16 @@ footer {
         width: 100%;
     }
 
-    /* Mobile: image centered above text/socials */
+    /* Mobile: keep float-right behaviour but make photo smaller */
     .about-text .about-photo {
-        float: none;
-        display: block;
-        margin: 0 auto 1rem;
-        width: 60%;
-        max-width: 200px;
+        float: right;
+        width: 35%;
+        max-width: 140px;
         height: auto;
         border-radius: 12px;
         object-fit: cover;
+        margin-left: 0.75rem;
+        margin-bottom: 0.75rem;
     }
 /* Details Section */
 #details {
