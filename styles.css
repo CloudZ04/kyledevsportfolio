@@ -825,11 +825,11 @@ footer {
 }
 
 .about-text {
-    flex: 0 0 100%;
+    flex: 0 0 50%;
 }
 
 .about-image {
-    flex: 0 0 0%;
+    flex: 0 0 50%;
 }
 
 .about-image img {
@@ -932,11 +932,11 @@ footer {
 }
 
 .about-text {
-    flex: 0 0 40%;
+    flex: 0 0 30%;
 }
 
 .about-image {
-    flex: 0 0 60%;
+    flex: 0 0 70%;
 }
 
 .about-image img {
