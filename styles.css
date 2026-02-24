@@ -932,15 +932,15 @@ footer {
 }
 
 .about-text {
-    flex: 0 0 50%;
+    flex: 0 0 40%;
 }
 
 .about-image {
-    flex: 0 0 50%;
+    flex: 0 0 60%;
 }
 
 .about-image img {
-    width: 85%;
+    width: 80%;
 }
 
 }
