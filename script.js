@@ -235,7 +235,18 @@ document.addEventListener('DOMContentLoaded', function() {
       const contactSection = document.getElementById('contact');
       contactSection.innerHTML = data;
       console.log('Contact inserted into DOM');
-      
+
+      function updateContactTimes() {
+        const visitorEl = document.getElementById('visitor-time');
+        const myEl = document.getElementById('my-time');
+        if (!visitorEl || !myEl) return;
+        const now = new Date();
+        visitorEl.textContent = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
+        myEl.textContent = now.toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: true });
+      }
+      updateContactTimes();
+      setInterval(updateContactTimes, 1000);
+
       const form = document.querySelector('.contact-form');
       const messageDiv = document.getElementById('form-message');
       
