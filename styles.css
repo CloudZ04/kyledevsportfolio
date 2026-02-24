@@ -926,16 +926,7 @@ footer {
 }
 
 .about-text {
-    flex: 0 0 40%;
     font-size: 0.9rem;
-}
-
-.about-image {
-    flex: 0 0 60%;
-}
-
-.about-image img {
-    width: 50%;
 }
 
 }
