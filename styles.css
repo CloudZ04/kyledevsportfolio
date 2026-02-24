@@ -89,24 +89,22 @@ main {
 
 /* About Section Layout */
 .about-content {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
+    max-width: 100%;
 }
 
 .about-text {
-    flex: 0 0 65%;
+    position: relative;
 }
 
-.about-image {
-    flex: 0 0 35%;
-}
-
-.about-image img {
-    width: 80%;
+.about-text .about-photo {
+    float: right;
+    width: 45%;
+    max-width: 220px;
     height: auto;
-    display: block;
-    border-radius: 10%;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-left: 1.25rem;
+    margin-bottom: 0.75rem;
 }
 
 /* Social Links */
@@ -141,6 +139,7 @@ main {
 /* Details Section */
 #details {
     margin-top: 4rem;
+    clear: both;
 }
 
 .details-tabs {
@@ -819,25 +818,19 @@ footer {
         gap: 1.5rem;
     }
 
-    /* About Section Layout */
-.about-content {
-    gap: 1rem;
-    max-width: 65%;
-}
+    /* About Section Layout (mobile, keep tight-wrap image) */
+    .about-content {
+        max-width: 100%;
+    }
 
-.about-text {
-    flex: 0 0 50%;
-}
+    .about-text {
+        width: 100%;
+    }
 
-.about-image {
-    flex: 0 0 50%;
-}
-
-.about-image img {
-    width: 90%;
-    max-width: 100%;
-}
-
+    .about-text .about-photo {
+        width: 50%;
+        max-width: 180px;
+    }
 /* Details Section */
 #details {
     margin-top: 4rem;
