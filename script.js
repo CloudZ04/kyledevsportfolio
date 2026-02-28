@@ -86,6 +86,11 @@ function showSection(targetId) {
   const targetSection = document.getElementById(targetId);
   if (targetSection) {
     targetSection.style.display = "block";
+
+        // Reset FAQ to chooser when navigating to FAQ
+    if (targetId === "faq" && typeof window.resetFaqView === "function") {
+      window.resetFaqView();
+    }
   }
 }
 
@@ -147,31 +152,88 @@ document.addEventListener('DOMContentLoaded', function() {
   console.log('Starting component loading...');
   
   // Load FAQ
-  fetch('faq.html')
-    .then(response => {
-      console.log('FAQ fetch response:', response.ok, response.status);
-      if (!response.ok) throw new Error('Failed to load FAQ');
-      return response.text();
-    })
-    .then(data => {
-      console.log('FAQ data loaded, length:', data.length);
-      const faqSection = document.getElementById('faq');
-      faqSection.innerHTML = data;
-      console.log('FAQ inserted into DOM');
-      initFAQ();
-      
-      // Apply current navigation state after FAQ loads
-      const hash = window.location.hash.replace("#", "");
-      const currentSection = hash || "about";
-      
-      // Hide FAQ if we're not on the FAQ page
-      if (currentSection !== "faq" && currentSection !== "about") {
-        faqSection.style.display = "none";
+fetch('faq.html')
+  .then(response => {
+    console.log('FAQ fetch response:', response.ok, response.status);
+    if (!response.ok) throw new Error('Failed to load FAQ');
+    return response.text();
+  })
+  .then(data => {
+    console.log('FAQ data loaded, length:', data.length);
+    const faqSection = document.getElementById('faq');
+    faqSection.innerHTML = data;
+
+    // Elements inside the loaded FAQ
+    const faqIntro    = faqSection.querySelector('.faq-intro');        // or #faq-intro if you gave it an id
+    const faqBlocks   = faqSection.querySelectorAll('.faq-block');
+    const modeButtons = faqSection.querySelectorAll('.faq-buttons-question');
+    const backButtons = faqSection.querySelectorAll('.faq-back-btn');
+
+    function showFaqIntro() {
+      if (faqIntro) faqIntro.style.display = 'block';
+      faqBlocks.forEach(block => {
+        block.style.display = 'none';
+      });
+    }
+
+    function showFaqBlock(kind) {
+      if (faqIntro) faqIntro.style.display = 'none';
+      faqBlocks.forEach(block => {
+        block.style.display = 'none';
+      });
+
+      const targetId = `faq-${kind}`; // faq-developer or faq-freelance
+      const target = document.getElementById(targetId);
+      if (target) {
+        target.style.display = 'block';
       }
-    })
-    .catch(error => {
-      console.error('Error loading FAQ:', error);
+    }
+
+    function closeAllFaqAccordions() {
+      const items   = faqSection.querySelectorAll('.faq-item');
+      const answers = faqSection.querySelectorAll('.faq-answer');
+
+      items.forEach(item => item.classList.remove('active'));
+      answers.forEach(answer => {
+        // assuming you use max-height for accordion; clear it
+        answer.style.maxHeight = null;
+      });
+    }
+
+    // Top two buttons
+    modeButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.dataset.faqTarget; // "developer" or "freelance"
+        if (target) {
+          showFaqBlock(target);
+          closeAllFaqAccordions();
+        }
+      });
     });
+
+    // Back buttons inside each block
+    backButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        showFaqIntro();
+        closeAllFaqAccordions();
+      });
+    });
+
+    // Expose a global reset so nav/hash handlers can call it
+    window.resetFaqView = function () {
+      showFaqIntro();
+      closeAllFaqAccordions();
+    };
+
+    // Initial state when FAQ first loads
+    window.resetFaqView();
+
+    // Your existing accordion setup, if any
+    initFAQ();
+  })
+  .catch(error => {
+    console.error('Error loading FAQ:', error);
+  });
   
   // Load Projects
   fetch('projects.html')
