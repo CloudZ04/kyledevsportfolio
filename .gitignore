@@ -1,13 +1,22 @@
-# Environment variables (contains passwords)
+# Environment variables (never commit secrets)
 .env
+.env.local
 
-# Composer dependencies
+# Keep the template in the repo
+!.env.example
+
+# Composer dependencies (reinstalled on deploy)
 /vendor/
 
 # Log files
 *.log
 email_errors.log
+
+# Generated / local-only text (contact backups, notes, etc.)
 submissions.txt
+*.txt
+# Allow this doc to be committed if you want it on GitHub
+!CONTACT_SETUP.txt
 
 # System files
 .DS_Store
