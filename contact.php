@@ -169,7 +169,7 @@ try {
           </div>
 
           <div class=\"card-footer\" style=\"background:#191420;\">
-            Sent from <a href=\"https://kyledevs.com\" target=\"_blank\" rel=\"noopener noreferrer\">kyledevs.com</a>
+            Sent from <a href=\"https://kyledevs.co.uk\" target=\"_blank\" rel=\"noopener noreferrer\">kyledevs.co.uk</a>
           </div>
         </div>
       </div>

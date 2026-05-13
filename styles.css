@@ -1101,3 +1101,17 @@ footer {
     }
 
 }
+
+/* Stack project actions vertically on very narrow screens.
+   View More stays on top (DOM order); badge or external link sits below. */
+@media (max-width: 400px) {
+    .project-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .project-actions .project-status,
+    .project-actions .project-link-btn {
+        margin-left: 0;
+    }
+}
