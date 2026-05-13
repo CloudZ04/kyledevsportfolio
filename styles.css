@@ -475,7 +475,9 @@ main {
     color: rgba(255, 255, 255, 0.85);
 }
 
-.view-more-btn {
+/* Shared pill-button look for View More toggle and external project links. */
+.view-more-btn,
+.project-link-btn {
     padding: 0.6rem 1.5rem;
     background-color: rgba(251, 255, 43, 0.1);
     border: 2px solid #fbff2b;
@@ -485,20 +487,108 @@ main {
     font-size: 0.95rem;
     font-weight: 600;
     cursor: pointer;
-    margin-top: 1rem;
     transition: all 0.3s ease;
-    display: none; /* Hidden by default */
+    text-decoration: none;
+    line-height: 1.2;
 }
 
-.view-more-btn:hover {
+.view-more-btn:hover,
+.project-link-btn:hover {
     background-color: #fbff2b;
     color: #191420;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(251, 255, 43, 0.3);
 }
 
+.view-more-btn {
+    margin-top: 1rem;
+    display: none; /* Hidden until JS detects overflow */
+}
+
 .view-more-btn.show {
     display: inline-block;
+}
+
+.project-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.project-link-btn .fa-arrow-up-right-from-square {
+    font-size: 0.8em;
+}
+
+
+/* Row that holds View More + status badge. Keeps both vertically
+   centred so their text sits on the same line, and pushes the status
+   to the far right via margin-left: auto. */
+.project-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+    margin-top: 1rem;
+}
+
+.project-actions .view-more-btn,
+.project-actions .project-status,
+.project-actions .project-link-btn {
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.project-actions .project-status,
+.project-actions .project-link-btn {
+    margin-left: auto;
+}
+
+/* Padding and font-size match .view-more-btn so the text baselines align. */
+.project-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.6rem 0.95rem;
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    vertical-align: top;
+    user-select: none;
+}
+
+.project-status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.project-status--ongoing .project-status-dot {
+    background-color: #fbff2b;
+    box-shadow: 0 0 0 0 rgba(251, 255, 43, 0.7);
+    animation: project-status-pulse 2s infinite;
+}
+
+@keyframes project-status-pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(251, 255, 43, 0.55); }
+    70%  { box-shadow: 0 0 0 8px rgba(251, 255, 43, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(251, 255, 43, 0); }
+}
+
+
+.project-status--completed .project-status-dot {
+    background-color: #fbff2b;
+}
+
+.project-status--archived .project-status-dot {
+    background-color: rgba(255, 255, 255, 0.25);
 }
 
 /* FAQ Section */

@@ -221,8 +221,14 @@ fetch('faq.html')
 
     // Expose a global reset so nav/hash handlers can call it
     window.resetFaqView = function () {
-      showFaqIntro();
+      // TEMP: skip the intro chooser and go straight to the developer block
+      // while the freelancing content is being reworked. To restore the
+      // chooser, swap the line below for: showFaqIntro();
+      showFaqBlock('developer');
       closeAllFaqAccordions();
+      // Hide the Back button since there's no intro to go back to right now
+      const devBackBtn = document.querySelector('#faq-developer .faq-back-btn');
+      if (devBackBtn) devBackBtn.style.display = 'none';
     };
 
     // Initial state when FAQ first loads
