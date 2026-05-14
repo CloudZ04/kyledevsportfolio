@@ -366,7 +366,7 @@ fetch('faq.html')
       if (window.location.protocol === 'file:') {
         form.addEventListener('submit', (e) => {
           e.preventDefault();
-          messageDiv.textContent = 'Please open this site via http://localhost/portfolio-site/ to use the contact form!';
+          messageDiv.textContent = 'Please use https://kyledevs.co.uk to send a message through the contact form.';
           messageDiv.className = 'form-message error';
           messageDiv.style.display = 'block';
         });
