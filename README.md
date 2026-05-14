@@ -1,7 +1,7 @@
-# Kyle Devs
-<a href="https://www.kyledevs.co.uk/">
+# Kyle Devs <a href="https://www.kyledevs.co.uk/">
   <img src="./assets/SVG/kyledevslogo.svg" height="50" alt="KyleDevs Logo"/>
 </a>
+
 
 This portfolio was built to showcase both academic, personal, and any commercial projects, ranging from front-end web development and UI design to WordPress and full-stack work.
 
