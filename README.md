@@ -3,7 +3,7 @@
   <img src="./assets/SVG/kyledevslogo.svg" height="50" alt="KyleDevs Logo"/>
 </a>
 
-This portfolio was built to showcase both academic, personal, and any commercial projects, ranging from front-end web development and UI design to WordPress and full-stack work.
+This portfolio was built to showcase academic, personal, and any commercial projects, ranging from front-end web development and UI design to WordPress and full-stack work.
 
 The site is continuously updated as I complete new projects and improve existing ones.
 
