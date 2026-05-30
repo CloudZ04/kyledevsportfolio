@@ -576,10 +576,22 @@ main {
     animation: project-status-pulse 2s infinite;
 }
 
+.project-status--youarehere .project-status-dot {
+    background-color: #4ade80;
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7);
+    animation: project-status-pulse-youarehere 2s infinite;
+}
+
 @keyframes project-status-pulse {
     0%   { box-shadow: 0 0 0 0 rgba(251, 255, 43, 0.55); }
     70%  { box-shadow: 0 0 0 8px rgba(251, 255, 43, 0); }
     100% { box-shadow: 0 0 0 0 rgba(251, 255, 43, 0); }
+}
+
+@keyframes project-status-pulse-youarehere {
+    0%   { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.55); }
+    70%  { box-shadow: 0 0 0 8px rgba(74, 222, 128, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
 }
 
 
