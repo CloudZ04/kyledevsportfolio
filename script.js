@@ -354,8 +354,9 @@ fetch('faq.html')
         const myEl = document.getElementById('my-time');
         if (!visitorEl || !myEl) return;
         const now = new Date();
-        visitorEl.textContent = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
-        myEl.textContent = now.toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', hour12: true });
+        const timeFormat = { hour: '2-digit', minute: '2-digit', hour12: true };
+        visitorEl.textContent = now.toLocaleTimeString('en-GB', timeFormat);
+        myEl.textContent = now.toLocaleTimeString('en-GB', { ...timeFormat, timeZone: 'Europe/London' });
       }
       updateContactTimes();
       setInterval(updateContactTimes, 1000);
