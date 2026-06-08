@@ -335,35 +335,19 @@ main {
     zoom: 1.33;
     overflow: hidden;
     background-color: rgba(255, 255, 255, 0.05);
+    position: relative;
 }
 
 .project-image-preview img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     transition: transform 0.3s ease;
 }
 
 .project-item:hover .project-image-preview img {
-    transform: scale(1.05);
-}
-
-/* Portfolio card: center logo in preview (no bottom gap) */
-.project-image-preview--centered {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.project-image-preview--centered img {
-    width: auto;
-    max-width: 90%;
-    height: auto;
-    max-height: 90%;
-    object-fit: contain;
-}
-
-.project-item:hover .project-image-preview--centered img {
     transform: scale(1.05);
 }
 
@@ -1072,18 +1056,13 @@ footer {
     }
 
 
-.project-image-preview {
-    width: 100%;
-    height: 160px;
-    zoom: 1.33;
-    overflow: hidden;
-    background-color: rgba(255, 255, 255, 0.05);
-    cursor: pointer;
-}
-
-    #projects .project-item:hover .project-image-preview img,
-    #projects .project-item:hover .project-image-preview--centered img {
-        transform: none;
+    .project-image-preview {
+        width: 100%;
+        height: 160px;
+        zoom: 1.33;
+        overflow: hidden;
+        background-color: rgba(255, 255, 255, 0.05);
+        cursor: pointer;
     }
 
     .form-group input,
