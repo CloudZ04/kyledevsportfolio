@@ -231,10 +231,10 @@ fetch('faq.html')
       if (devBackBtn) devBackBtn.style.display = 'none';
     };
 
-    // Initial state when FAQ first loads
     window.resetFaqView();
 
-    // Your existing accordion setup, if any
+    updateAges();
+
     initFAQ();
   })
   .catch(error => {
@@ -422,3 +422,24 @@ fetch('faq.html')
       console.error('Error loading Contact:', error);
     });
 });
+
+function getAge(birthDate) {
+  const today = new Date();
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const monthDiff = today.getMonth() - birthDate.getMonth();
+  const dayDiff = today.getDate() - birthDate.getDate();
+
+  if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+    age--;
+  }
+  return age;
+}
+
+function updateAges() {
+  const age = getAge(new Date(2004, 6, 9));
+  document.querySelectorAll('[data-age]').forEach((el) => {
+    el.textContent = age;
+  });
+}
+
+updateAges();
